@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Instaploader app</title>
+    <style type="text/css">
+      
+      * {
+        font-family: Dosis, sans-serif;
+      }
+
+      body {
+        min-width: 500px;
+        color: #E2DFE8;
+        background-color: #373968;
+      }
+
+      textarea {
+        background: #747493;
+        color: #E2DFE8;
+        border: 0;
+      }
+      textarea[readonly] {
+        opacity: .8;
+      }
+
+      input[type="file"] {
+        font-size: 18px;
+        cursor: pointer;
+        padding-top: 5px;
+      }
+
+      input[type=file]::-webkit-file-upload-button {
+        background-color: #FB6B97;
+        border-radius: 15px;
+        color: #FFF;
+        border: 0;
+        font-size: 15px;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+
+      button {
+        background-color: #FB6B97;
+        color: #FFF;
+        cursor: pointer;
+        border-radius: 40px;
+        border: 0;
+        font-size: 30px;
+        padding: 5px 70px;
+      }
+      button:hover {
+        opacity: 0.9;
+      }
+
+      #image-placeholder {
+        width: 350px;
+      }
+
+      #upload {
+        margin-bottom: 50px;
+      }
+      #upload-textarea {
+        font-size: 18px;
+        max-width: 600px;
+        width: 70%;
+        height: 260px;
+      }
+
+      #upload-hashtags {
+        max-width: 400px;
+        width: 27%;
+        height: 260px; 
+        font-size: 14px;
+      }
+
+      .row {
+        position: relative;
+        padding-top: 25px;
+        margin-bottom: 25px;
+      }
+
+      .submit {
+        text-align: center;
+      }
+
+      label {
+        position: absolute;
+        top: -5px;
+        vertical-align: top;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .note span {
+        display: none;
+      }
+      .note:hover span {
+        display: inline-block;
+      }
+
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+
+  </head>
+  <body>
+  
+    <div id="upload">
+      <h1>Instaploader of <script>document.write(process.env.INSTAGRAM_0_USERNAME);</script></h1>
+
+      <div class="row">
+        <div class="image">
+          <img id="image-placeholder" src="images/placeholder.png"/>
+        </div>
+        <label class="note" for="upload-file">Image (?<span class="note-description"> : only jpg format is supported</span>)</label>
+        <input id="upload-file" type="file" name="upload-file">
+      </div>
+
+      <div class="row">
+        <label for="upload-textarea">Message</label>
+        <textarea id="upload-textarea"></textarea>
+
+        <label for="upload-hashtags">#haghtags</label>
+        <textarea id="upload-hashtags" readonly>#barba_gianny #beardlove #barbalunga #barbacurata #barbershop #barberstyle #beardthefuckup #barbermoderno #barberia #beardman #beardmodel grownbeard #beardboy #moustache #moustachelove #moustachelife #moustaches #moustacheboy #beardlifestyle #beardstagram #beardedvillainsitaly
+        </textarea>
+      </div>
+
+      <div class="submit">
+        <button id="upload-btn">Upload</button>
+      </div>
+    </div>
+
+    <!-- All of the Node.js APIs are available in this renderer process. -->
+    We are using Node.js <script>document.write(process.versions.node)</script>,
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.
+
+   
+  </body>
+
+  <script src="./app.js"></script>
+  
+</html>
