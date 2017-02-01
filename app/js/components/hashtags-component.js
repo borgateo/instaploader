@@ -14,10 +14,35 @@ export default class HashtagsComponent extends Component {
   }
 
   render() {
+
+    let hashtags = [
+      '#barba_gianny',
+      '#beardlove',
+      '#barbalunga',
+      '#barbacurata',
+      '#barbershop',
+      '#barberstyle',
+      '#beardthefuckup',
+      '#barbermoderno',
+      '#barberia',
+      '#beardman',
+      '#beardmodel',
+      '#grownbeard',
+      '#beardlifestyle',
+      '#beardstagram',
+      '#beardedvillainsitaly',
+      '#lebarbeignoranti',
+      '#barbutoitaliano',
+      '#beardinspire',
+      '#barba'
+    ];
+
     return (
       <div>
-        <label for="upload-hashtags">#haghtags</label>
-        <textarea id="upload-hashtags" readonly>#barba_gianny #beardlove #barbalunga #barbacurata #barbershop #barberstyle #beardthefuckup #barbermoderno #barberia #beardman #beardmodel grownbeard #beardboy #moustache #moustachelove #moustachelife #moustaches #moustacheboy #beardlifestyle #beardstagram #beardedvillainsitaly</textarea>
+        <label for="upload-hashtags">#haghtags ({hashtags.length})</label>
+        <textarea id="upload-hashtags" readonly>
+          { hashtags.join(' ') }
+        </textarea>
       </div>
     );
   }

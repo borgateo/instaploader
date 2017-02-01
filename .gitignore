@@ -9,3 +9,6 @@ static
 
 app/cookies/*.json
 !app/cookies/.gitkeep 
+
+logs/*.json
+!logs/.gitkeep 

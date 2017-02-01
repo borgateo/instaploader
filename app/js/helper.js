@@ -59,9 +59,6 @@ export function upload( file, caption ) {
     return false;
   }
 
-  logEvent( caption );
-  return;
-
   Client.Upload.photo( session, file )
     .then(function( uploadObj ) {
       // uploadObj instanceof Client.Upload

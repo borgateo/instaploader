@@ -1248,26 +1248,31 @@ var HashtagsComponent = function (_Component) {
   }
 
   createClass(HashtagsComponent, [{
-    key: "_handleChange",
+    key: '_handleChange',
     value: function _handleChange(e) {
       var text = e.target.value;
       this.props.onChange({ caption: text });
     }
   }, {
-    key: "render",
+    key: 'render',
     value: function render$$1() {
+
+      var hashtags = ['#barba_gianny', '#beardlove', '#barbalunga', '#barbacurata', '#barbershop', '#barberstyle', '#beardthefuckup', '#barbermoderno', '#barberia', '#beardman', '#beardmodel', '#grownbeard', '#beardlifestyle', '#beardstagram', '#beardedvillainsitaly', '#lebarbeignoranti', '#barbutoitaliano', '#beardinspire', '#barba'];
+
       return h(
-        "div",
+        'div',
         null,
         h(
-          "label",
-          { "for": "upload-hashtags" },
-          "#haghtags"
+          'label',
+          { 'for': 'upload-hashtags' },
+          '#haghtags (',
+          hashtags.length,
+          ')'
         ),
         h(
-          "textarea",
-          { id: "upload-hashtags", readonly: true },
-          "#barba_gianny #beardlove #barbalunga #barbacurata #barbershop #barberstyle #beardthefuckup #barbermoderno #barberia #beardman #beardmodel grownbeard #beardboy #moustache #moustachelove #moustachelife #moustaches #moustacheboy #beardlifestyle #beardstagram #beardedvillainsitaly"
+          'textarea',
+          { id: 'upload-hashtags', readonly: true },
+          hashtags.join(' ')
         )
       );
     }
@@ -1333,9 +1338,6 @@ function upload(file, caption) {
     alert('Forgot to upload a picture?');
     return false;
   }
-
-  logEvent(caption);
-  return;
 
   Client.Upload.photo(session, file).then(function (uploadObj) {
     // uploadObj instanceof Client.Upload

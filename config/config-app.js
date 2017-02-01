@@ -16,6 +16,6 @@ const users = [
 ];
 
 module.exports = {
-  user: users[1],
+  user: users[0],
   logFile: "log.json"
 };
