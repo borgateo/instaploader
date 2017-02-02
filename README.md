@@ -9,6 +9,9 @@ instaploader
 
 There's a `.env-example` file. Rename it to `.env` and add your instagram credentials.
 
+create an empty file `/logs/log.json` file: 
+`$ touch logs/log.json`
+
 
 ### How to use it
 
