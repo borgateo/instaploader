@@ -1,4 +1,4 @@
-import { h, Component, Classnames } from 'preact';
+import { h, Component } from 'preact';
 
 import UploadImageComponent from './upload-image-component';
 import ComposeCaptionComponent from './compose-caption-component';
