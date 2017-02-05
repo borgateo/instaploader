@@ -4,7 +4,7 @@ import UploadImageComponent from './upload-image-component';
 import ComposeCaptionComponent from './compose-caption-component';
 import HashtagsComponent from './hashtags-component';
 
-import { me, upload } from '../helper';
+import { me, upload, hashtags } from '../helper';
 
 export default class App extends Component {
   constructor() {
@@ -12,7 +12,7 @@ export default class App extends Component {
 
     this.state = {
       loading: false,
-      username: me().username,
+      username: me.username,
       caption: '',
       image: ''
     };
@@ -54,7 +54,7 @@ export default class App extends Component {
           </div>
           <div class="column">
             <ComposeCaptionComponent onChange={this.onChange.bind(this)} />
-            <HashtagsComponent />
+            <HashtagsComponent hashtags={hashtags}/>
           </div>
         </div>
 

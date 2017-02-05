@@ -48,9 +48,8 @@ function account( callback ) {
 }
 */
 
-export function me() {
-  return currentUser;
-}
+export const me = currentUser;
+export const hashtags = Conf.hashtags;
 
 export function upload( file, caption ) {
   if ( !fs.existsSync( file ) ) {
@@ -73,7 +72,7 @@ export function upload( file, caption ) {
 }
 
 function logEvent( caption ) {
-  let logFile = './logs/log.json';
+  let logFile = Conf.logfile;
   let logJSON = {};
   let jsonDate = (new Date()).toJSON();
   let date = new Date(jsonDate);

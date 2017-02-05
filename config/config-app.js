@@ -1,4 +1,4 @@
-// conf.js
+// confing-app.js
 // ----------
 // all configurations
 
@@ -15,7 +15,12 @@ const users = [
 	}
 ];
 
+const hashtags = [
+	'#yourhashtags'
+];
+
 module.exports = {
   user: users[0],
-  logFile: "log.json"
+  hashtags: hashtags,
+  logfile: './logs/log.json'
 };

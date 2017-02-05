@@ -1,11 +1,9 @@
 import { h, Component } from 'preact';
 
-
 export default class HashtagsComponent extends Component {
   
   constructor(props) {
     super(props);
-    this.state = { done: false };
   }
 
   _handleChange( e ) {
@@ -13,30 +11,7 @@ export default class HashtagsComponent extends Component {
     this.props.onChange( {caption: text} );
   }
 
-  render() {
-
-    let hashtags = [
-      '#barba_gianny',
-      '#beardlove',
-      '#barbalunga',
-      '#barbacurata',
-      '#barbershop',
-      '#barberstyle',
-      '#beardthefuckup',
-      '#barbermoderno',
-      '#barberia',
-      '#beardman',
-      '#beardmodel',
-      '#grownbeard',
-      '#beardlifestyle',
-      '#beardstagram',
-      '#beardedvillainsitaly',
-      '#lebarbeignoranti',
-      '#barbutoitaliano',
-      '#beardinspire',
-      '#barba'
-    ];
-
+  render({hashtags}) {
     return (
       <div>
         <label for="upload-hashtags">#haghtags ({hashtags.length})</label>

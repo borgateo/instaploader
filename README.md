@@ -28,7 +28,7 @@ Feel free to fork it, or create PRs.
 
 ### TODO
 
-- ~log uploads into log.json file~
+- ~~log uploads into log.json file~~
 - schedule publish time
 - fetch best hashtags
 - any more?
