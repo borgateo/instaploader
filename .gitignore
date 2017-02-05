@@ -11,4 +11,6 @@ app/cookies/*.json
 !app/cookies/.gitkeep 
 
 logs/*.json
-!logs/.gitkeep 
+!logs/.gitkeep
+
+app/bundle.js

@@ -1,4 +1,4 @@
-import { h, Component } from 'preact';
+import { h, Component, Classnames } from 'preact';
 
 import UploadImageComponent from './upload-image-component';
 import ComposeCaptionComponent from './compose-caption-component';
@@ -10,15 +10,26 @@ export default class App extends Component {
   constructor() {
     super();
 
-    this.state = { 
+    this.state = {
+      loading: false,
       username: me().username,
-      caption: "",
-      image: ""
+      caption: '',
+      image: ''
     };
   }
 
   _handleUploadClick() {
-    upload( this.state.image, this.state.caption );
+    this.setState({loading: true});
+    let that = this;
+
+    upload( this.state.image, this.state.caption )
+    .then(function(params) {
+      console.info('done', params);
+      that.setState({loading: false});
+    }).catch(function(error) {
+      console.log(error);
+      that.setState({loading: false});
+    });
   }
 
   _handleCancelClick() {
@@ -29,12 +40,12 @@ export default class App extends Component {
     this.setState( state );
   }
 
-  render() {
+  render({},{ username, loading }) {
     return (
       <div id="upload">
         
         <div class="header">
-          <h1>Instaploader of {this.state.username}</h1>
+          <h1>Instaploader of {username}</h1>
         </div>
 
         <div class="content">
@@ -48,15 +59,19 @@ export default class App extends Component {
         </div>
 
         <div class="submit">
+
           <button
-            class="primary-btn"
+            class={{'primary-btn': true, 'is-loading': loading}}
             onClick={this._handleUploadClick.bind(this)}
           >
             Upload
+            <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+              <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+            </svg>
           </button>
 
           <button
-            class="secondary-btn"
+            class='secondary-btn'
             onClick={this._handleCancelClick.bind(this)}
           >
             Cancel

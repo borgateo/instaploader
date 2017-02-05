@@ -13,9 +13,6 @@ body {
   padding-left: 20px;
 }
 
-h1 { 
-}
-
 textarea {
   background: rgba(255, 255, 255, .125);
   color: #E2DFE8;
@@ -40,31 +37,6 @@ input[type=file]::-webkit-file-upload-button {
   font-size: 15px;
   padding: 5px 10px;
   cursor: pointer;
-}
-
-button {
-  color: #FFF;
-  cursor: pointer;
-  border-radius: 40px;
-  border: 0;
-  font-size: 30px;
-  padding: 5px 70px;
-  overflow: hidden;
-  transition: all .2s ease-out;
-  transform: translate3d(0, 0, 0);
-  margin: 5px;
-}
-button:hover {
-  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2);
-}
-
-.primary-btn {
-  background-color: #FB6B97;
-}
-
-.secondary-btn {
-  background: none;
-  opacity: .75;
 }
 
 #image-placeholder {

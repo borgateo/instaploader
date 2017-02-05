@@ -53,13 +53,12 @@ export function me() {
 }
 
 export function upload( file, caption ) {
-
   if ( !fs.existsSync( file ) ) {
     alert('Forgot to upload a picture?');
-    return false;
+    return Promise.reject(new Error('image do not exist!'));
   }
 
-  Client.Upload.photo( session, file )
+  return Client.Upload.photo( session, file )
     .then(function( uploadObj ) {
       // uploadObj instanceof Client.Upload
       // nothing more than just keeping uploadObj id
@@ -68,8 +67,7 @@ export function upload( file, caption ) {
     })
     .then(function( medium ) {
       logEvent( caption );
-      // we configure medium, it is now visible with caption
-      console.log(medium.params);
+      return Promise.resolve( medium.params );
     })
   ;
 }

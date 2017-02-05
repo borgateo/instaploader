@@ -1,0 +1,76 @@
+button {
+  font-size: 30px;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+  margin: 15px 0;
+  padding: 15px 70px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  border: 0;
+  border-radius: 40px;
+  outline: none;
+}
+
+.primary-btn {
+  color: #fff;
+  background-color: #fb6b97;
+  box-shadow: 0 6px #ab3c3c;
+}
+
+.primary-btn:hover {
+  top: 2px;
+  box-shadow: 0 4px #ab3c3c;
+}
+
+.primary-btn:active {
+  top: 6px;
+  box-shadow: 0 0 #ab3c3c;
+}
+
+.secondary-btn {
+  opacity: .75;
+  background: none;
+}
+
+.spinner {
+  position: absolute;
+  top: 1.5px;
+  right: 0;
+  animation: rotator 1.4s linear infinite;
+  stroke: #fff;
+  display: none;
+}
+
+button.is-loading .spinner {
+  display: block;
+}
+
+@keyframes rotator {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(270deg); }
+}
+
+.spinner .path {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  animation: dash 1.4s ease-in-out infinite; 
+}
+
+@keyframes dash {
+ 0% { stroke-dashoffset: 187; }
+ 50% {
+   stroke-dashoffset: 46.75;
+   transform:rotate(135deg);
+ }
+ 100% {
+   stroke-dashoffset: 187;
+   transform:rotate(450deg);
+ }
+}
+
+
+
