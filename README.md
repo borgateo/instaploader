@@ -1,6 +1,8 @@
 instaploader
 ========
 
+![screenshot](https://dl.dropboxusercontent.com/u/1089758/instaploader.png)
+
 ### Install dependencies
 
 `npm install`
