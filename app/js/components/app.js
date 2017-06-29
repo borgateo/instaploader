@@ -4,7 +4,7 @@ import UploadImageComponent from './upload-image-component';
 import ComposeCaptionComponent from './compose-caption-component';
 import HashtagsComponent from './hashtags-component';
 
-import { me, upload, hashtags } from '../helper';
+import { me, upload, hashtags, login } from '../helper';
 
 export default class App extends Component {
   constructor() {
@@ -38,6 +38,10 @@ export default class App extends Component {
 
   onChange( state ) {
     this.setState( state );
+  }
+
+  componentDidMount() {
+    login();
   }
 
   render({},{ username, loading }) {

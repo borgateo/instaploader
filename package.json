@@ -1,16 +1,17 @@
 {
   "name": "instaploader",
-  "version": "0.0.2",
-  "description": "Upload your pic to instagram with electron",
+  "version": "0.0.3",
+  "description": "Upload your pics to instagram with electron",
   "repository": {
     "type": "git",
     "url": "https://github.com/borteo/instaploader.git"
   },
-  "author": "",
+  "author": "borteo",
   "license": "MIT",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
+    "build": "rollup -c rollup.config.js",
     "rollup": "rollup -cw rollup.config.js"
   },
   "dependencies": {

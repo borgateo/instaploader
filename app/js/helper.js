@@ -14,17 +14,16 @@ const storage = new Client.CookieFileStorage('./app/cookies/'+ currentUser.usern
 const session = new Client.Session(device, storage);
 
 //-------------------------------------------------
-/*
-function login() {
 
-  // And go for login
+export function login() {
   Client.Session.create( device, storage, currentUser.username, currentUser.password )
     .then(function( session ) {
-      console.log('this is your session', session );
+      console.log('this is your session: ', session );
     })
   ;
 }
 
+/*
 function account( callback ) {
     let id;
 
