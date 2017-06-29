@@ -1,7 +1,7 @@
 instaploader
 ========
 
-![instaploader](https://raw.github.com/borteo/instaploader/master/screenshots/01.png)
+![instaploader](https://raw.github.com/borteo/instaploader/master/screenshots/01.jpg)
 
 ### Install dependencies
 
